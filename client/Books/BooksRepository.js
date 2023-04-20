@@ -45,7 +45,7 @@ export const addBook = (bookPm) => async (dispatch, getState, { http }) => {
     return state.booksState.lastBookAddedPm;
   };
   
-  export default function reducer(
+  export function booksReducer(
     booksState = { booksPm: null, lastBookAddedPm: null },
     action = {}
   ) {

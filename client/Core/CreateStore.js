@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import booksReducer from "../Books/BooksRepository";
+import { booksReducer } from "../Books/BooksRepository";
 
 const rootReducer = combineReducers({
   booksState: booksReducer
