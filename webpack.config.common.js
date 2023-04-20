@@ -8,6 +8,21 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/i,
+        use: [
+          // Does the work of style-loader and
+          // separates the css file from js bundle
+          MiniCssExtractPlugin.loader,
+          {
+            // Translates CSS into CommonJS
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
           // Does the work of style-loader and
